@@ -28,7 +28,7 @@ def main():
         start_date=config.START_DATE,
         end_date=config.END_DATE,
         window_size=config.WINDOW_SIZE,
-        render_mode="human"  # or None
+        render_mode="None"  # human or None
     )
 
     n_states = env.observation_space.shape[0]
@@ -48,9 +48,9 @@ def main():
 
     for i_episode in range(config.NUM_EPISODES):
         state, _ = env.reset()
-        episode_reward = 0
+        episode_reward = 0.0
 
-        for t in range(config.MAX_STEPS_PER_EPISODE):
+        while True:
             epsilon = config.EPSILON_END + (config.EPSILON_START - config.EPSILON_END) * \
                       math.exp(-1. * total_steps / config.EPSILON_DECAY)
             total_steps += 1

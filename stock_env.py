@@ -102,7 +102,7 @@ class StockTradingEnv(gym.Env):
             if self.inventory:
                 bought_price = self.inventory.pop(0)
                 profit = current_price - bought_price
-                reward = max(profit, 0.0)  # match previous impl’s reward shape
+                reward = profit
                 self.total_profit += profit
 
         self.current_step += 1
@@ -110,7 +110,7 @@ class StockTradingEnv(gym.Env):
         next_observation = self.signal_features[self.current_step]
         truncated = False
         info = self._get_info()
-        if self.render_mode == 'human' and self.current_step % 20 == 0:
+        if self.render_mode == 'human' and self.current_step % 200 == 0:
             print(self._render_human())
         return next_observation, reward, terminated, truncated, info
 
