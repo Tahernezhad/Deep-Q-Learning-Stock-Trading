@@ -18,9 +18,8 @@ This repo is a research sandbox that demonstrates: (1) how to build a small, rep
 - **Custom Gymnasium env**: `StockTrading-v0` with `Buy/Hold/Sell` discrete actions, FIFO inventory, realized‑P&L rewards.
 - **State**: `window_size` most recent **price diffs** (1‑D float32), compatible with `MlpPolicy` style nets.
 - **Agent**: DQN w/ toggles for **Double DQN**, **Dueling**, soft (Polyak) or hard target updates.
-- **Backbones**: MLP, 1D‑CNN, LSTM (dueling variants included)..
+- **Backbones**: MLP, 1D‑CNN, LSTM (dueling variants included).
 - **Data**: `yfinance` adjusted closes; train window set in config.
-- **Artifacts**: per‑run folder under `results/` with `hyperparameters.txt`, `reward_plot.png`, and optional checkpoint.
 
 ---
 
@@ -43,8 +42,8 @@ If you’re CPU‑only, remove CUDA lines in the `environment.yml` or let Conda 
 Deep-Q-Learning-Stock-Trading/
 ├── config.py            # All switches: data window, algo toggles, HParams
 ├── stock_env.py         # Gymnasium env: Buy/Hold/Sell, FIFO inventory, rewards
-├── dqn_agent.py         # DQN w/ Double & Dueling options + soft/hard target updates
-├── networks.py          # MLP, 1D‑CNN, LSTM (+ dueling variants)
+├── dqn_agent.py         # DQN Double & Dueling options + soft/hard target updates
+├── networks.py          # MLP, 1D‑CNN, LSTM
 ├── replay_buffer.py     # Uniform experience replay
 ├── utils.py             # Seeding, plotting, checkpoint & config save
 ├── main.py              # Training entry point
@@ -68,7 +67,7 @@ Edit **`config.py`**.
 - `ENV_NAME = 'StockTrading-v0'`
 - `TICKER = 'AAPL'`   # pick any supported by `yfinance`
 - `START_DATE`, `END_DATE`  # train window
-- `WINDOW_SIZE = 5`   # length of price‑diff window (state)
+- `WINDOW_SIZE = 5`   # length of price‑diff window (RL states)
 
 **Agent & algorithm**
 - `MODEL_TYPE = 'MLP' | 'CNN1D' | 'LSTM'`
