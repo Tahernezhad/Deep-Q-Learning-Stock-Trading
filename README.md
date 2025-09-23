@@ -125,6 +125,3 @@ Open `reward_plot.png` in the run folder. The blue line is per‑episode reward;
 
 ---
 
-## 📣 Citation
-If this repo helps your work, star it and cite it in your README/paper notes. Then go build the next experiment — this is a launchpad, not a landing zone.
-
