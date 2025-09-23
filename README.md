@@ -18,7 +18,7 @@ This repo is a research sandbox that demonstrates: (1) how to build a small, rep
 - **Custom Gymnasium env**: `StockTrading-v0` with `Buy/Hold/Sell` discrete actions, FIFO inventory, realized‑P&L rewards.
 - **State**: `window_size` most recent **price diffs** (1‑D float32), compatible with `MlpPolicy` style nets.
 - **Agent**: DQN w/ toggles for **Double DQN**, **Dueling**, soft (Polyak) or hard target updates.
-- **Backbones**: MLP, 1D‑CNN, LSTM (dueling variants included).
+- **Backbones**: MLP, 1D‑CNN, LSTM (dueling variants included)..
 - **Data**: `yfinance` adjusted closes; train window set in config.
 - **Artifacts**: per‑run folder under `results/` with `hyperparameters.txt`, `reward_plot.png`, and optional checkpoint.
 
