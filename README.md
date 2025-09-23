@@ -1,9 +1,10 @@
 # Deep‑Q‑Learning‑Stock‑Trading (PyTorch)
 
-A focused, end‑to‑end DQN baseline for **single‑asset stock trading** with a clean **Gymnasium** environment, a modular PyTorch agent (MLP/CNN/LSTM backbones, **Double DQN**, **Dueling**), and opinionated training utilities. It’s intentionally minimal so you can fork fast, iterate faster, and ship learnings.
+End‑to‑end DQN baseline for **single‑asset stock trading** with **Gymnasium** environment, a modular PyTorch agent (MLP/CNN/LSTM backbones, **Double/Dueling DQN**), and training utilities. It’s intentionally minimal so you can fork fast, iterate faster, and ship learnings.
 
 <p align="center">
-  <em>Total reward per episode (10‑episode moving average in orange). Example artifact from a single run.</em>
+  <img src="./assets/reward_plot.png" alt="Total rewards per episode chart" width="720"><br>
+  <em>Total reward per episode (10-episode moving average in orange).</em>
 </p>
 
 ---
