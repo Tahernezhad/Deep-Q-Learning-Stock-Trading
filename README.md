@@ -10,7 +10,7 @@ End‑to‑end DQN baseline for **single‑asset stock trading** with **Gymnasiu
 ---
 
 ## 🔎 Scope
-This repo is **not** a plug‑and‑play trading system. It’s a research sandbox that demonstrates: (1) how to build a small, reproducible RL stack for markets; (2) how reward shaping and state design drive outcomes. You’ll extend it for real constraints (costs, sizing, risk).
+This repo is a research sandbox that demonstrates: (1) how to build a small, reproducible RL stack for markets; (2) how reward shaping and state design drive outcomes. It can be extended for real constraints (costs, sizing, risk).
 
 ---
 
