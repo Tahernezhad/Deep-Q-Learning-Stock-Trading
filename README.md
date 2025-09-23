@@ -118,13 +118,6 @@ Open `reward_plot.png` in the run folder. The blue line is per‑episode reward;
 
 ---
 
-## 🔧 Troubleshooting
-- **`yfinance` empty frame**: check ticker/date range; ensure internet; try a different asset.
-- **Divergent rewards**: widen `EPSILON_DECAY`, increase `REPLAY_BUFFER_SIZE`, or reduce `LEARNING_RATE`.
-- **Non‑determinism**: seeds help but RL is stochastic. Expect run‑to‑run variance.
-
----
-
 ## 🙌 Acknowledgements
 - [Gymnasium](https://github.com/Farama-Foundation/Gymnasium)
 - [PyTorch](https://pytorch.org/)
