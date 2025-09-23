@@ -101,22 +101,15 @@ Open `reward_plot.png` in the run folder. The blue line is per‑episode reward;
 
 ## 🧠 Environment design (TL;DR)
 - **Actions**: `0=Hold`, `1=Buy`, `2=Sell`.
-- **Inventory**: unlimited long FIFO queue (first‑in sells first). No shorting by default.
+- **Inventory**: unlimited long FIFO queue (first‑in sells first).
 - **Reward**: realized P&L only (profit appears **on sell**); holding has zero reward.
 - **State**: last `window_size` price **differences** (left‑padded at start) — a simple stationary-ish signal.
 - **Termination**: end of historical series.
 
-> This is deliberately spartan. It’s great for method testing, not capital allocation.
-
 ---
 
-## 📉 Known limitations / To‑dos
-- No transaction costs, slippage, or latency.
-- No position sizing; buys always add one unit.
-- No risk metrics (Sharpe/Sortino), drawdown, or live PnL tracking beyond realized profit.
-- No walk‑forward or train/validation split baked in.
+## 📉 Roadmap
 
-**Roadmap**
 - Commission/slippage, borrow fees; capped inventory; optional shorting.
 - Position‑sizing actions (discrete or continuous) and cash accounting.
 - Train/val/test split, walk‑forward evaluation, and early stopping.
