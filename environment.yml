@@ -29,6 +29,11 @@ dependencies:
   - rich
   - box2d-py
   - pandas-stubs
+  -
+  # Testing
+  - pytest            # The core testing framework
+  - pytest-cov        # For measuring code coverage
+  - pytest-mock       # For mocking environment interactions
 
   - pip:
       - gymnasium==1.2.0
